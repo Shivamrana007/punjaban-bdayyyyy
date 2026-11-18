@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, My Babygirl Punjaban 💖🌹</title>
+
+  <!-- Google Fonts: Romantic & Modern Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Separated Modular Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=13">
+  <link rel="stylesheet" href="css/animations.css?v=13">
+</head>
+<body>
+
+  <!-- Heart Incoming & Opening Page Transition Overlay -->
+  <div class="heart-incoming-overlay" id="heartIncomingOverlay">
+    <div class="heart-bloom-ring"></div>
+    <div class="heart-incoming-shape"></div>
+  </div>
+
+  <!-- Rose Corner Accents -->
+  <div class="rose-accent rose-top-left">🌹</div>
+  <div class="rose-accent rose-top-right">🌹</div>
+  <div class="rose-accent rose-bottom-left">🌹</div>
+  <div class="rose-accent rose-bottom-right">🌹</div>
+
+  <!-- Dedicated Audio Element for Alfaaz by Zain Zohaib -->
+  <audio id="mainBgmAudio" src="audio/alfaaz.mp3?v=11" preload="auto" loop playsinline></audio>
+
+  <!-- Background Particle & Confetti Canvases -->
+  <canvas id="particles-canvas"></canvas>
+  <canvas id="confetti-canvas"></canvas>
+
+  <!-- Floating Top Controls: Clean Music Player Only -->
+  <div class="top-controls">
+    <button class="control-pill music-status-pill" id="musicToggleBtn" title="Play 'Alfaaz' by Zain Zohaib">
+      🎵 <span>Play Alfaaz</span>
+    </button>
+  </div>
+
+  <!-- Floating Boost Heart Burst Button -->
+  <button class="boost-fab" id="boostBtn" title="Burst Hearts & Rose Petals! 💕">
+    💖
+  </button>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       PAGE 1: 5-SECOND ANIMATED LIQUID HEART & 3D PAPER ROLL CAROUSEL
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container active" id="page-1">
+    <div class="loading-box">
+      <h1 class="loading-headline glow-text">
+        Someone special's birthday is incoming...<br>
+        Get ready, my Babygirl Punjaban! 💖🌹
+      </h1>
+
+      <!-- 3D Circular Paper Roll Rotating Carousel of Her Real Memories -->
+      <div class="paper-roll-stage" title="Orbiting paper roll carousel of memories">
+        <div class="paper-roll-rotator" id="paperRollRotator"></div>
+      </div>
+
+      <!-- Heart-Shaped Animated Liquid Filling Meter -->
+      <div class="heart-progress-meter" id="heartMeterBox">
+        <svg viewBox="0 0 200 180" class="heart-loading-svg">
+          <defs>
+            <linearGradient id="heartLiquidGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#C2185B" />
+              <stop offset="35%" stop-color="#FF1493" />
+              <stop offset="75%" stop-color="#FF69B4" />
+              <stop offset="100%" stop-color="#FFB6C1" />
+            </linearGradient>
+
+            <clipPath id="heartShapeClip">
+              <path d="M100,165 C60,125 0,85 0,48 A48,48,0,0,1,100,28 A48,48,0,0,1,200,48 C200,85 140,125 100,165Z" />
+            </clipPath>
+          </defs>
+
+          <path class="heart-track-bg" d="M100,165 C60,125 0,85 0,48 A48,48,0,0,1,100,28 A48,48,0,0,1,200,48 C200,85 140,125 100,165Z" />
+
+          <g clip-path="url(#heartShapeClip)">
+            <rect id="heartLiquidFill" x="0" y="180" width="200" height="180" fill="url(#heartLiquidGrad)" />
+          </g>
+
+          <path class="heart-fill-stroke" id="heartFillPath" d="M100,165 C60,125 0,85 0,48 A48,48,0,0,1,100,28 A48,48,0,0,1,200,48 C200,85 140,125 100,165Z" />
+        </svg>
+
+        <div class="heart-bubbles-layer" id="heartBubblesLayer"></div>
+
+        <div class="heart-percentage-center">
+          <span class="pct-value" id="heartPctLabel">0%</span>
+          <span class="pct-sub" id="heartSubLabel">filling with love... 💕</span>
+        </div>
+      </div>
+
+      <div class="loading-action-container" id="loadingActionWrapper">
+        <button class="btn-romantic btn-romantic-primary pulse-animation" data-target-page="chapter-1" style="font-size: 1.15rem; padding: 18px 46px;">
+          Tap to Open Your Birthday Surprise ✨
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CHAPTER 1: PEHLA ALFAAZ (First Glance & Your Smile)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="chapter-1">
+    <div class="chapter-stepper-bar">
+      <div class="stepper-dot active" data-chapter="1">1</div>
+      <div class="stepper-dot" data-chapter="2">2</div>
+      <div class="stepper-dot" data-chapter="3">3</div>
+      <div class="stepper-dot" data-chapter="4">4</div>
+      <div class="stepper-dot" data-chapter="5">5</div>
+      <div class="stepper-dot" data-chapter="6">6</div>
+    </div>
+
+    <div class="page-heart-flourish">
+      <span class="blooming-heart-icon">🌸</span>
+      <span class="blooming-heart-icon">💖</span>
+      <span class="blooming-heart-icon">🌸</span>
+    </div>
+
+    <div class="story-page-wrapper">
+      <div class="attached-picture-container">
+        <div class="ribbon-tape"></div>
+        <img id="attachedPic_1" src="images/image_1.jpg" alt="Memory 1">
+        <span class="picture-caption-pill" id="attachedPicCaption_1">Pehla Alfaaz 💫</span>
+        <span class="picture-song-quote">"Unki tareef mein kahein kya, alfaaz hi nahi hain..."</span>
+      </div>
+
+      <div class="story-scroll-card">
+        <div class="chapter-badge-header">
+          <span class="chapter-number-pill">Chapter One</span>
+          <span class="chapter-music-quote-tag">♫ Alfaaz — Zain Zohaib</span>
+        </div>
+        <h2 class="story-heading glow-text">Pehla Alfaaz & That Smile ✨</h2>
+        <p class="story-subheading">When my eyes first found you, the whole world faded away...</p>
+
+        <div class="story-scrollable-body">
+          <p class="story-paragraph">
+            My sweetest Babygirl Punjaban,
+            There are moments in life that divide our existence into "before" and "after". For me, that dividing line was the very first second my eyes looked into yours. The universe suddenly turned silent, and my heart whispered with absolute certainty: <em>"She is the one."</em>
+          </p>
+          <div class="story-quote-highlight">
+            "Unki tareef mein kahein kya, alfaaz hi nahi hain... Jo kuch mera hai, sab unka — mera dil, meri rooh, meri har dua."
+          </div>
+          <p class="story-paragraph">
+            Whenever you smile, do you even know the magic you create? It isn't just a curve of your lips; it is sunlight breaking through the heaviest clouds. It is peace after months of chaos. It is the purest poetry I have ever read.
+          </p>
+          <p class="story-paragraph">
+            On your birthday, I want to thank God for the day you were born. For every heartbeat you take, for every laugh that escapes your lips, and for the way you make this messy world feel gentle, warm, and full of grace.
+          </p>
+          <div class="story-signoff">Forever captivated by you, my love 💖</div>
+        </div>
+
+        <div class="story-nav-footer">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="page-1">
+            ← Replay Loading
+          </button>
+          <button class="btn-romantic btn-romantic-primary" data-target-page="chapter-2">
+            Next: Punjabi Queen 👑
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CHAPTER 2: MERI HEER PUNJABAN (Fierce Grace & Royal Charm)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="chapter-2">
+    <div class="chapter-stepper-bar">
+      <div class="stepper-dot" data-chapter="1">1</div>
+      <div class="stepper-dot active" data-chapter="2">2</div>
+      <div class="stepper-dot" data-chapter="3">3</div>
+      <div class="stepper-dot" data-chapter="4">4</div>
+      <div class="stepper-dot" data-chapter="5">5</div>
+      <div class="stepper-dot" data-chapter="6">6</div>
+    </div>
+
+    <div class="page-heart-flourish">
+      <span class="blooming-heart-icon">🌸</span>
+      <span class="blooming-heart-icon">💖</span>
+      <span class="blooming-heart-icon">🌸</span>
+    </div>
+
+    <div class="story-page-wrapper">
+      <div class="attached-picture-container">
+        <div class="ribbon-tape"></div>
+        <img id="attachedPic_2" src="images/image_2.jpg" alt="Memory 2">
+        <span class="picture-caption-pill" id="attachedPicCaption_2">Meri Heer Punjaban 👑</span>
+        <span class="picture-song-quote">"Tere husn te sadke, meri jaan nisaar..."</span>
+      </div>
+
+      <div class="story-scroll-card">
+        <div class="chapter-badge-header">
+          <span class="chapter-number-pill">Chapter Two</span>
+          <span class="chapter-music-quote-tag">♫ Soulful Punjabi Romance</span>
+        </div>
+        <h2 class="story-heading glow-text">Fierce Royalty & Soft Heart 👑</h2>
+        <p class="story-subheading">Born with grace in your veins and innocence in your soul</p>
+
+        <div class="story-scrollable-body">
+          <p class="story-paragraph">
+            To my breathtaking Punjaban Queen,
+            There is something undeniably royal about you. That fierce Punjabi pride you carry, that stylish elegance with sunglasses and that confident swagger, and yet — the tenderest, sweetest heart underneath it all.
+          </p>
+          <div class="story-quote-highlight">
+            "Akhiyan 'ch chamak te mathe te noor... Meri Punjaban jivein rabb da suroor."
+          </div>
+          <p class="story-paragraph">
+            The way your eyes dance when a Punjabi rhythm plays, the infectious energy you bring into every room, and the adorable sass you give me when you pretend to be mad — jaan, you are the complete definition of royalty.
+          </p>
+          <p class="story-paragraph">
+            You don't need a crown made of gold; you wear your kindness, your loyalty, and your strength like a queen. I am the luckiest man alive just to walk behind you, holding your hand, and calling you mine.
+          </p>
+          <div class="story-signoff">Your devoted king, always and forever 💕</div>
+        </div>
+
+        <div class="story-nav-footer">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="chapter-1">
+            ← Chapter 1
+          </button>
+          <button class="btn-romantic btn-romantic-primary" data-target-page="chapter-3">
+            Next: Jo Kuch Mera Hai 💖
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CHAPTER 3: JO KUCH MERA HAI (Total Surrender of Love)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="chapter-3">
+    <div class="chapter-stepper-bar">
+      <div class="stepper-dot" data-chapter="1">1</div>
+      <div class="stepper-dot" data-chapter="2">2</div>
+      <div class="stepper-dot active" data-chapter="3">3</div>
+      <div class="stepper-dot" data-chapter="4">4</div>
+      <div class="stepper-dot" data-chapter="5">5</div>
+      <div class="stepper-dot" data-chapter="6">6</div>
+    </div>
+
+    <div class="page-heart-flourish">
+      <span class="blooming-heart-icon">🌸</span>
+      <span class="blooming-heart-icon">💖</span>
+      <span class="blooming-heart-icon">🌸</span>
+    </div>
+
+    <div class="story-page-wrapper">
+      <div class="attached-picture-container">
+        <div class="ribbon-tape"></div>
+        <img id="attachedPic_3" src="images/image_3.jpg" alt="Memory 3">
+        <span class="picture-caption-pill" id="attachedPicCaption_3">Jo Kuch Mera Hai 💖</span>
+        <span class="picture-song-quote">"Jo kuch mera hai sab unka, jo unka hai woh mera hai..."</span>
+      </div>
+
+      <div class="story-scroll-card">
+        <div class="chapter-badge-header">
+          <span class="chapter-number-pill">Chapter Three</span>
+          <span class="chapter-music-quote-tag">♫ Alfaaz — Zain Zohaib</span>
+        </div>
+        <h2 class="story-heading glow-text">Jo Kuch Mera Hai, Sab Unka 💖</h2>
+        <p class="story-subheading">Every dream, every breath, and every tomorrow belongs to you</p>
+
+        <div class="story-scrollable-body">
+          <p class="story-paragraph">
+            My precious Babygirl,
+            When Zain Zohaib sang <em>"Jo kuch mera hai sab unka, jo unka hai woh mera hai"</em>, I swear every single syllable was written for you and me.
+          </p>
+          <div class="story-quote-highlight">
+            "Jo kuch mera hai sab unka... meri khushiyan, meri manzil, meri har saans te tera haq hai."
+          </div>
+          <p class="story-paragraph">
+            Look at this picture of you with those traditional jhumkas and that radiant gaze — you are the embodiment of pure elegance. My happiness is no longer separate from yours. When you smile, my heart blooms; when you are tired or hurt, my world aches. Everything I build, every goal I chase, has your face glowing in the center of it.
+          </p>
+          <p class="story-paragraph">
+            I don't just love you for who you are; I love who I become when I am with you. You make me softer, braver, and wiser. You are my greatest blessing, and I dedicate every beat of my heart to keeping you protected and adored.
+          </p>
+          <div class="story-signoff">Yours in this world and the next 🌹</div>
+        </div>
+
+        <div class="story-nav-footer">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="chapter-2">
+            ← Chapter 2
+          </button>
+          <button class="btn-romantic btn-romantic-primary" data-target-page="chapter-4">
+            Next: Sacred Late Nights 🌙
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CHAPTER 4: SACRED LATE NIGHTS (Memories & Deepest Bonds)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="chapter-4">
+    <div class="chapter-stepper-bar">
+      <div class="stepper-dot" data-chapter="1">1</div>
+      <div class="stepper-dot" data-chapter="2">2</div>
+      <div class="stepper-dot" data-chapter="3">3</div>
+      <div class="stepper-dot active" data-chapter="4">4</div>
+      <div class="stepper-dot" data-chapter="5">5</div>
+      <div class="stepper-dot" data-chapter="6">6</div>
+    </div>
+
+    <div class="page-heart-flourish">
+      <span class="blooming-heart-icon">🌸</span>
+      <span class="blooming-heart-icon">💖</span>
+      <span class="blooming-heart-icon">🌸</span>
+    </div>
+
+    <div class="story-page-wrapper">
+      <div class="attached-picture-container">
+        <div class="ribbon-tape"></div>
+        <img id="attachedPic_4" src="images/image_4.jpg" alt="Memory 4">
+        <span class="picture-caption-pill" id="attachedPicCaption_4">Sacred Late Nights 🌙</span>
+        <span class="picture-song-quote">"Raatan nu taare gin gin, bas tera intezaar..."</span>
+      </div>
+
+      <div class="story-scroll-card">
+        <div class="chapter-badge-header">
+          <span class="chapter-number-pill">Chapter Four</span>
+          <span class="chapter-music-quote-tag">♫ Whispers in the Dark</span>
+        </div>
+        <h2 class="story-heading glow-text">Those Sacred Late Nights 🌙</h2>
+        <p class="story-subheading">When hours melted away and the world was just us two</p>
+
+        <div class="story-scrollable-body">
+          <p class="story-paragraph">
+            Look at you in this photo, sitting like royalty on that throne, glowing with effortless grace in your white suit. It takes my breath away every single time.
+          </p>
+          <p class="story-paragraph">
+            Remember those midnight conversations where neither of us wanted to say goodbye? When 2 AM silently bled into 5 AM, and we were still talking about our deepest dreams, our fears, and the silliest things that made us giggle quietly?
+          </p>
+          <div class="story-quote-highlight">
+            "In a world where everyone is in a rush, those slow, quiet hours with you are my absolute sanctuary."
+          </div>
+          <p class="story-paragraph">
+            Those nights taught me what genuine connection feels like. You never put on a facade with me; you trusted me with your rawest thoughts, your insecurities, and your sweetest hopes. I carry the echo of your soft voice in my ears every single night.
+          </p>
+          <div class="story-signoff">Holding you in my thoughts, always 💫</div>
+        </div>
+
+        <div class="story-nav-footer">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="chapter-3">
+            ← Chapter 3
+          </button>
+          <button class="btn-romantic btn-romantic-primary" data-target-page="chapter-5">
+            Next: My Safe Harbor 🌸
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CHAPTER 5: MY SAFE HARBOR (Strength, Hugs & Home)
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="chapter-5">
+    <div class="chapter-stepper-bar">
+      <div class="stepper-dot" data-chapter="1">1</div>
+      <div class="stepper-dot" data-chapter="2">2</div>
+      <div class="stepper-dot" data-chapter="3">3</div>
+      <div class="stepper-dot" data-chapter="4">4</div>
+      <div class="stepper-dot active" data-chapter="5">5</div>
+      <div class="stepper-dot" data-chapter="6">6</div>
+    </div>
+
+    <div class="page-heart-flourish">
+      <span class="blooming-heart-icon">🌸</span>
+      <span class="blooming-heart-icon">💖</span>
+      <span class="blooming-heart-icon">🌸</span>
+    </div>
+
+    <div class="story-page-wrapper">
+      <div class="attached-picture-container">
+        <div class="ribbon-tape"></div>
+        <img id="attachedPic_5" src="images/image_5.jpg" alt="Memory 5">
+        <span class="picture-caption-pill" id="attachedPicCaption_5">My Safe Harbor 🌸</span>
+        <span class="picture-song-quote">"Tu meri thandak, tu mera sukoon..."</span>
+      </div>
+
+      <div class="story-scroll-card">
+        <div class="chapter-badge-header">
+          <span class="chapter-number-pill">Chapter Five</span>
+          <span class="chapter-music-quote-tag">♫ Sukoon & Eternal Care</span>
+        </div>
+        <h2 class="story-heading glow-text">My Sukoon & Safe Harbor 🌸</h2>
+        <p class="story-subheading">In your presence, my tired soul finds its true home</p>
+
+        <div class="story-scrollable-body">
+          <p class="story-paragraph">
+            Babygirl,
+            The world outside can be ruthless, fast, and demanding. But the moment I hear your voice, or see that loving twinkle in your eyes, everything softens. You are my <em>sukoon</em> — that untranslatable feeling of deep, holy peace.
+          </p>
+          <div class="story-quote-highlight">
+            "Mera sukoon vi tu, mera junoon vi tu... Rab kolo mangi hoyi dua vi tu."
+          </div>
+          <p class="story-paragraph">
+            You don't even realize how much strength you give me. Just knowing that you believe in me makes me feel like I can conquer the world. When you place your head on my shoulder, time stands still. I promise to always be that same shelter for you — your biggest cheerleader, your shield against sadness, and your warm embrace.
+          </p>
+          <p class="story-paragraph">
+            No matter how heavy the road gets, you will never have to carry life alone. I am right here, walking beside you, step for step, heart to heart.
+          </p>
+          <div class="story-signoff">Forever your rock and your shelter 💗</div>
+        </div>
+
+        <div class="story-nav-footer">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="chapter-4">
+            ← Chapter 4
+          </button>
+          <button class="btn-romantic btn-romantic-primary" data-target-page="chapter-6">
+            Next: Chapter 6 🎂
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       CHAPTER 6: THE ETERNAL BIRTHDAY VOW & SURPRISE UNLOCK
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="chapter-6">
+    <div class="chapter-stepper-bar">
+      <div class="stepper-dot" data-chapter="1">1</div>
+      <div class="stepper-dot" data-chapter="2">2</div>
+      <div class="stepper-dot" data-chapter="3">3</div>
+      <div class="stepper-dot" data-chapter="4">4</div>
+      <div class="stepper-dot" data-chapter="5">5</div>
+      <div class="stepper-dot active" data-chapter="6">6</div>
+    </div>
+
+    <div class="page-heart-flourish">
+      <span class="blooming-heart-icon">🌸</span>
+      <span class="blooming-heart-icon">💖</span>
+      <span class="blooming-heart-icon">🌸</span>
+    </div>
+
+    <div class="story-page-wrapper">
+      <div class="attached-picture-container">
+        <div class="ribbon-tape"></div>
+        <img id="attachedPic_6" src="images/image_6.jpg" alt="Memory 6">
+        <span class="picture-caption-pill" id="attachedPicCaption_6">The Eternal Vow 🎂</span>
+        <span class="picture-song-quote">"Janamdin mubaarak, meri heer, meri jaan!"</span>
+      </div>
+
+      <div class="story-scroll-card">
+        <div class="chapter-badge-header">
+          <span class="chapter-number-pill">Chapter Six — The Grand Vow</span>
+          <span class="chapter-music-quote-tag">♫ Forever & Beyond</span>
+        </div>
+        <h2 class="story-heading glow-text">Happy Birthday, My Babygirl! 🎂</h2>
+        <p class="story-subheading">My eternal prayer, my sacred promise, my forever love</p>
+
+        <div class="story-scrollable-body">
+          <p class="story-paragraph">
+            And here we are, at the crown of our celebration. Today is not just another date on the calendar; it is the holy anniversary of the day the universe created its most magnificent masterpiece: YOU.
+          </p>
+          <div class="story-quote-highlight">
+            "Meri heer, meri jaan, meri Babygirl Punjaban — Janamdin bahaar ban ke aave, te khushiyan tere kadam chumein!"
+          </div>
+          <p class="story-paragraph">
+            On your birthday, my greatest prayer for you is boundless joy. May your eyes only ever shed tears of pure laughter. May every dream in your delicate heart take flight. May you walk through this coming year surrounded by love, health, peace, and miracles.
+          </p>
+          <p class="story-paragraph">
+            And my eternal vow to you:
+            I will love you on the sunniest days, and I will love you twice as fiercely on the stormy ones. As Zain Zohaib sang: <em>"Jo kuch mera hai, sab unka..."</em> — my heart belongs to you today, tomorrow, and until the stars burn out.
+          </p>
+          <div class="story-signoff">
+            With infinite love & a million kisses,<br>
+            Yours completely and eternally, jaan 💋💖🌹
+          </div>
+        </div>
+
+        <div style="margin: 20px 0; text-align: center;">
+          <button class="btn-romantic btn-romantic-primary pulse-animation" data-target-page="secret-surprise-page" style="font-size: 1.12rem; padding: 16px 38px;">
+            🎁 Unlock The Secret Surprise & Birthday Cake 🎂
+          </button>
+        </div>
+
+        <div class="story-nav-footer">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="chapter-5">
+            ← Chapter 5
+          </button>
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="page-1">
+            🔁 Replay From Start
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════════════
+       SECRET SURPRISE PAGE: DARK PINK VELVET GRADIENT & 3D POPUP CAKE
+       ═══════════════════════════════════════════════════════════════════ -->
+  <section class="view-container" id="secret-surprise-page">
+    <div class="secret-stage-container">
+      <div class="page-heart-flourish">
+        <span class="blooming-heart-icon">👑</span>
+        <span class="blooming-heart-icon">💖</span>
+        <span class="blooming-heart-icon">🎂</span>
+      </div>
+      <h1 class="secret-headline glow-text">A Royal Birthday Wish For My Queen 👑</h1>
+      <p class="secret-subheadline">To the most precious girl in this universe — Happy Birthday! 💖</p>
+
+      <!-- Royal Glowing Portrait of Babygirl Punjaban -->
+      <div class="babygirl-royal-portrait">
+        <span class="crown-pin">👑</span>
+        <img id="babygirlRoyalPic" src="images/image_4.jpg" alt="Babygirl Punjaban">
+      </div>
+
+      <!-- 3D Realistic Birthday Cake (Slow Popup Animation) -->
+      <div class="cake-stage">
+        <div class="cake-plate"></div>
+        <div class="cake-tier-bottom">
+          <div class="cake-frosting-drips-bottom"></div>
+        </div>
+        <div class="cake-tier-top">
+          <div class="cake-frosting-drips-top"></div>
+          <div class="cake-decor-strawberries">
+            <span>🍓</span>
+            <span>🌹</span>
+            <span>🍓</span>
+            <span>🌹</span>
+            <span>🍓</span>
+          </div>
+        </div>
+        <div class="cake-candle-wrapper" id="cakeCandleWrapper">
+          <div class="candle-flame" id="candleFlame"></div>
+          <div class="candle-smoke-puff"></div>
+          <div class="candle-wick"></div>
+          <div class="candle-stick"></div>
+        </div>
+      </div>
+
+      <!-- Make a Wish & Blow the Candle Button -->
+      <div class="blow-candle-action-area">
+        <button class="btn-make-wish pulse-animation" id="blowCandleBtn" onclick="window.App.blowCandle()">
+          🌬️ Make a Wish & Blow the Candle ✨
+        </button>
+      </div>
+
+      <!-- Wish Granted Emotional Banner -->
+      <div class="wish-granted-banner" id="wishGrantedBanner">
+        <h2 class="wish-granted-title">Your Wish Is Granted! ✨🎂</h2>
+        <div style="font-size: 2.5rem; margin-bottom: 12px;">💖🌹🎉✨👑💋🌸</div>
+        <p class="wish-granted-text">
+          "Your wish has been whispered directly to the stars, my Babygirl Punjaban.<br>
+          May God protect your smile, grant every prayer in your heart, and keep us together forever.<br>
+          <strong>Jo kuch mera hai, sab kuch unka...</strong> I love you more than life itself! 💖"
+        </p>
+
+        <div style="display: flex; gap: 14px; justify-content: center; flex-wrap: wrap;">
+          <button class="btn-romantic btn-romantic-secondary" data-target-page="chapter-6">
+            ← Back to Chapters
+          </button>
+          <button class="btn-romantic btn-romantic-primary" data-target-page="page-1">
+            🔁 Experience Journey Again ✨
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Separated Modular Scripts -->
+  <script src="js/particles.js?v=13"></script>
+  <script src="js/audio.js?v=13"></script>
+  <script src="js/app.js?v=13"></script>
+</body>
+</html>
